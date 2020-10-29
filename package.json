@@ -1,0 +1,27 @@
+{
+  "name": "projeto_gef",
+  "version": "1.0.0",
+  "description": "Portal de trabalhadores Grupo Espirita Fraternidade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiomontenegro/projeto_gef.git"
+  },
+  "author": "Caio Montenegro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiomontenegro/projeto_gef/issues"
+  },
+  "homepage": "https://github.com/caiomontenegro/projeto_gef#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
