@@ -11,4 +11,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(userRoutes);
 app.use(adminRoutes);
 
+app.use((req, res) => {
+    res.status(404).send('<h1> 404 Page not Found </h1>')
+})
+
 app.listen(3000);
