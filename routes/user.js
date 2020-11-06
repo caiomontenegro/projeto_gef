@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get('/', (req, res) => {
     console.log('Você está na Home Page');
-    res.send('<h1> Grupo Espírita Fraternidade. </h1>')
-})
+    res.sendFile(path.join(__dirname, '../', 'views', 'user.html'));
+});
 
 module.exports = router;

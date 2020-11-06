@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get('/biblioteca', (req, res) => {
     console.log('Você está na biblioteca');
-    res.send('<h1> Bem-vindo à Biblioteca </h1> <h3> Utilize o campo abaixo para cadastrar novos livros: </h3> <form action="/add-livro" method="POST"><input type="text" name="livro"><button type="submite">Cadastrar</button></form>');
+    res.sendFile(path.join(__dirname, '../', 'views', 'admin.html'));
 });
 
 router.post('/add-livro', (req, res) => {
