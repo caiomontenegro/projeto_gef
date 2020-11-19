@@ -4,10 +4,13 @@ const path = require('path');
 
 const app = express();
 
-const userRoutes = require('./routes/user');
-const adminRoutes = require('./routes/admin');
+const userRoutes = require('./routes');
+const adminRoutes = require('./routes/biblioteca');
 
-app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(userRoutes);
 app.use(adminRoutes);
