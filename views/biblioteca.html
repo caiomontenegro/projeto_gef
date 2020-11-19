@@ -10,13 +10,16 @@
     <header class="main-header">
         <nav class="main-header_nav">
             <ul class="main-header_item-list">
-                <li class="main-header_item"><a href="/">Página Principal</a></li>
-                <li class="main-header_item"><a href="/biblioteca">Biblioteca</a></li>
+                <li class="main-header_item"><a href="/">Home</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>404 Página não Encontrada.</h1>
+        <h1>Bem vindo à Biblioteca!</h1>
+        <form action="/add-livro" method="POST">
+            <input type="text" name="Livro">
+            <button type="submit">Cadastrar</button>
+        </form>
     </main>
 </body>
 </html>
