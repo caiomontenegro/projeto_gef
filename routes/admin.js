@@ -6,7 +6,8 @@ const livros = []
 
 router.get('/biblioteca', (req, res) => {
   console.log('Você está na biblioteca')
-  res.sendFile(path.join(__dirname, '../', 'views', 'biblioteca.html'))
+  const books = livros
+  res.render('biblioteca', {books: livros, pageTitle: 'Biblioteca'})
   console.log('Livros:', livros)
 })
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet" href="/style/main.css")
+    body
+        header.main-header
+            nav.main-header_nav
+                ul.main-header_item-list
+                    li.main-header_item
+                        a(href="/") Home
+    main
+        h1 Bem vindo à Biblioteca!
+        form(action="/add-livro", method="POST")
+            input(type="text", name="Livro")
+            button(type="submit") Cadastrar
+        h2 Livros:
+                    
+        if books.length > 0
+            .grid
+                each livros in books
+                    h3 #{livros.Livro}
+        else 
+            h7 Não há livros =(
